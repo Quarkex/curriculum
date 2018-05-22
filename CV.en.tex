@@ -18,6 +18,15 @@
 \newcolumntype{R}{p{0.8\textwidth}}
 \newcommand\VRule{\color{lightgray}\vrule width 0.5pt}
 
+\def\signed #1{{\leavevmode\unskip\nobreak\hfil\penalty50\hskip2em
+  \hbox{}\nobreak\hfil(#1)%
+  \parfillskip=0pt \finalhyphendemerits=0 \endgraf}}
+
+\newsavebox\mybox
+\newenvironment{aquote}[1]
+  {\savebox\mybox{#1}\begin{quote}}
+  {\signed{\usebox\mybox}\end{quote}}
+
 \begin{document}
     \pagenumbering{gobble}% Remove page numbers (and reset to 1)
 
@@ -93,6 +102,31 @@
 
     \section*{Personal Interests}
     Technology has always been present in my home, and together with games and music are the core of my interests. I first learned the basics of programming while building adventure modules for “Neverwinter Nights”. Nowadays my wife and I still run game sessions at home, which looks like half music store and half game workshop. I also play music in a band with students and former students of the computer science faculty and practice martial arts.
+
+    \section*{Professional Interests}
+    I do have a designer background and I like to build tools with human
+    interaction as a priority, but my interest in back end development has
+    slowly made me do the transition from web development to building smart
+    assistants.
+
+    Languages in general and computer languages in particular are an
+    interesting topic for me, and while I research one I like to pair it with a
+    closely related topic and vice versa. E.g. learning about concurrence and
+    recommendations from colleagues has sparked my interest in Elixir as a
+    language.
+
+    I like to understand the inner workings of the systems I work with,
+    therefore I prefer modular software and prioritize simplicity and
+    readability. I also tend to avoid pregenerated
+    code whenever possible.
+
+    \begin{aquote}{Harold Abelson}
+        Programs must be written for people to read, and only incidentally for machines to execute
+    \end{aquote}
+
+    That also reinforces my interest in free and open software in general,
+    and GNU-Linux in particular. The more I learn about it, the more I will
+    understand the machines I work with.
 
     \section*{Volunteering and Free Software}
     \begin{tabular}{L!{\VRule}R}
